@@ -1,0 +1,105 @@
+.quiz-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mother-pre-quest-bg {
+    background-image: url('../../public/assets/pre-questions-ibu-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mother-main-quest-bg {
+    background-image: url('../../public/assets/question-ibu-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.child-pre-quest-bg {
+    background-image: url('../../public/assets/pre-quest-anak-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.child-main-quest-bg {
+    background-image: url('../../public/assets/question-anak-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.quiz-question {
+    background: url('../../public/assets/questioin-border.png') rgba(0, 0, 0, 0) 0px 0px / 100% 100% no-repeat;
+    padding: 20px 30px;
+    max-width: 508px;
+    width: 90%;
+    height: 230px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.question-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #f6ebde;
+    margin-bottom: 20px;
+    margin-top: -40px;
+    padding: 40px;
+}
+
+.answer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.answer-button {
+    width: 190px;
+    height: 42px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f6ebde;
+    background: url(../../public/assets/questions-button.png) rgba(0, 0, 0, 0) 0px 0px / 100% 100% no-repeat;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+@media (max-width: 431px) {
+    .quiz-question {
+        max-width: 254px;
+        height: 115px;
+    }
+
+    .question-text {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #f6ebde;
+        padding: 20px;
+    }
+
+    .answer-button {
+        width: 95px;
+        height: 21px;
+        font-size: 0.7rem;
+        margin-top: -20px;
+    }
+}

@@ -1,0 +1,86 @@
+/* src/styles/syaratPage.css */
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.syarat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../../public/assets/dashboard-login.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+}
+
+.syarat-content {
+    background: url(../../public/assets/pop-up-box.png) rgba(0, 0, 0, 0) 0px 0px / 100% 100% no-repeat;
+    padding: 4rem 3rem 4rem;
+    max-width: 564px;
+    max-height: 555px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    -moz-text-align-last: left;
+    text-align-last: left;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: popup-show 0.3s forwards;
+    font-size: x-large;
+}
+
+.syarat-button {
+    background: url(../../public/assets/siap-bermain-button.png) rgba(0, 0, 0, 0) 0px 0px / 100% 100% no-repeat;
+    color: transparent;
+    width: 302px;
+    height: auto;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 1.5rem auto 1rem; /* Centers the button horizontally */
+    display: block; /* Ensures margin auto works */
+    transition: background-color 0.3s ease;
+}
+
+.syarat-button:hover {
+    background-color: #D2691E;
+}
+
+@media (max-width: 431px) {
+    .syarat-content {
+        padding: 3rem 2rem 3rem;
+        max-width: 282px;
+        max-height: 317px;
+        font-size:medium;
+    }
+
+    .syarat-title {
+        transform: translate(-50%, -100%);
+        max-width: 60%;
+    }
+
+    .syarat-checkbox label {
+        font-size: 0.6rem;
+    }
+
+    .syarat-button {
+        width: 182px;
+        height: 30px;
+    }
+
+    .syarat-list{
+        margin-left: -20px;
+    }
+}

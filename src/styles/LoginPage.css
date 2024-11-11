@@ -1,0 +1,318 @@
+/* src/pages/LoginPage.css */
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('../../public/assets/dashboard-login.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    padding-top: 80px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-title {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -140%);
+    max-width: 70%;
+    height: auto;
+    z-index: 10;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+    max-width: 384px;
+    height: auto;
+    background: url(../../public/assets/sign-in-box.png) rgba(0, 0, 0, 0) 0px 0px / 100% 100% no-repeat;
+    padding: 6rem 5rem 5rem;
+    border-radius: 15px;
+    z-index: 5;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.login-form input {
+    font-size: 1.3rem;
+    color: #333;
+    background: url(../../public/assets/form-input.png) rgba(0, 0, 0, 0) 0px 0px / 100% 100% no-repeat;
+    width: 95%;
+    height: 60px;
+    padding-left: 15px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+}
+
+.form-group select {
+    font-size: 1.3rem;
+    color: #333;
+    background: url(../../public/assets/form-input.png) rgba(0, 0, 0, 0) 0px 0px / 100% 100% no-repeat;
+    width: 101%;
+    height: 60px;
+    padding-left: 22px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    appearance: none;
+    background-image: url('../../public/assets/domisili.png'), url(../../public/assets/form-input.png);
+    background-position: right 10px center, 0 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20px auto, 100% 100%;
+}
+
+.login-form input::placeholder {
+    color: transparent;
+    opacity: 0;
+}
+
+.login-button {
+    background: url(../../public/assets/button-login.png) rgba(0, 0, 0, 0) 0px 0px / 100% 100% no-repeat;
+    width: 80%;
+    height: 40px;
+    color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.error-popup {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FF8C00;
+    color: #FFF;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 4px;
+    white-space: nowrap;
+    z-index: 10;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.form-group .error-popup-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-group input:focus+.error-popup,
+.form-group select:focus+.error-popup {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.error-popup-show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.terms-checkbox input[type="checkbox"] {
+    width: 16px;
+    /* Adjust width to make the box smaller */
+    height: 16px;
+    /* Adjust height to make the box smaller */
+    margin-right: 0.5rem;
+    /* Space between checkbox and label */
+}
+
+.terms-checkbox label {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.error-text {
+    color: red;
+    font-size: 12px;
+    display: block;
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 5px;
+    background-color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.input-error {
+    border: 1px solid red;
+    background-color: #ffe6e6;
+}
+
+.button-disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+@media (max-width: 391px) {
+    .login-form {
+        height: 192px;
+    }
+
+    .login-title {
+        transform: translate(-50%, -270%);
+        max-width: 70%;
+    }
+
+    .login-form {
+        width: 50%;
+        max-width: 384px;
+        height: auto;
+        background: url(../../public/assets/sign-in-box.png) rgba(0, 0, 0, 0) 0px 0px / 100% 100% no-repeat;
+        padding: 3rem 2rem 2rem;
+    }
+
+    .login-form input {
+        font-size: 0.9rem;
+        width: 90%;
+        height: 30px;
+    }
+
+    .form-group select {
+        font-size: 0.9rem;
+        width: 101%;
+        height: 30px;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .login-button {
+        height: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 431px) {
+
+    .login-title {
+        transform: translate(-50%, -290%);
+        max-width: 70%;
+    }
+
+    .login-form {
+        width: 50%;
+        max-width: 384px;
+        height: 336px;
+        background: url(../../public/assets/sign-in-box.png) rgba(0, 0, 0, 0) 0px 0px / 100% 100% no-repeat;
+        padding: 3rem 2rem 2rem;
+    }
+
+    .login-form input {
+        font-size: 0.8rem;
+        width: 90%;
+        height: 30px;
+    }
+
+    .form-group select {
+        font-size: 0.8rem;
+        width: 101%;
+        height: 30px;
+    }
+
+    .form-group label {
+        font-size: 0.7rem;
+    }
+
+    .login-button {
+        height: 20px;
+        margin-top: -2px;
+    }
+
+    .terms-checkbox label {
+        font-size: 0.6rem;
+        margin-top: -20px;
+    }
+
+    .terms-checkbox input[type="checkbox"] {
+        margin-top: -20px;
+    }
+}
+
+@media (min-width: 389px) {
+    .login-title {
+        transform: translate(-50%, -250%);
+    }
+}
+
+@media (max-width: 391px) {
+    .login-title {
+        transform: translate(-50%, -270%);
+    }
+}
+
+
+@media (min-width: 819px) {
+    .login-title {
+        transform: translate(-50%, -230%);
+    }
+}
+
+@media (min-width: 1023px) {
+    .login-title {
+        transform: translate(-50%, -190%);
+    }
+}

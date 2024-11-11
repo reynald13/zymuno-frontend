@@ -1,0 +1,34 @@
+.result-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: contain; /* Ensures the whole image is visible */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 1s ease-in-out;
+    overflow: hidden; /* Prevents scrollbars if the image overflows */
+}
+
+.back-button {
+    position: absolute;
+    bottom: 60px; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center the button horizontally */
+    padding: 10px 20px;
+    background-color: #ff6600; /* Example button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #e55b00; /* Darker shade on hover */
+  }
